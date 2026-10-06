@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+  <title>coziestine develops</title>
+  <meta name="description" content="Justine Recto — UI/UX designer and frontend developer from San Pablo City, Laguna. Browse projects, certifications, and get in touch."/>
+  <meta name="theme-color" content="#0B0B0D"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Justine Recto — UI/UX Designer &amp; Frontend Developer"/>
+  <meta property="og:description" content="Projects, tech stack, experience, and certifications."/>
+  <meta name="twitter:card" content="summary"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Justine Recto","jobTitle":"UI/UX Designer & Frontend Developer","email":"rectojustinedev@gmail.com","address":{"@type":"PostalAddress","addressLocality":"San Pablo City","addressRegion":"Laguna","addressCountry":"PH"},"sameAs":["https://www.linkedin.com/in/recto-justine-s-ab88b5406/","https://www.instagram.com/coziestine","https://www.threads.com/@coziestine"]}</script>
+  <link rel="icon" type="image/png" href="assets/favicon.png"/>
+  <link rel="apple-touch-icon" href="assets/favicon.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <!-- EmailJS SDK loaded BEFORE script.js -->
+  <script data-cfasync="false" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+
+  <!-- ══ HEADER / HERO ══ -->
+  <header id="top">
+    <div class="container">
+      <div class="hero">
+
+        <!-- FIX: avatar-dot was missing in original -->
+        <div class="avatar-wrap hero-animate">
+          <div class="avatar">
+            <img
+              id="avatarImg"
+              class="avatar-layer"
+              src="assets/pfp.jpg"
+              alt="Justine Recto"
+            />
+            <!-- Hover character: animated clip plays over the photo while hovering -->
+            <video
+              id="avatarAlt"
+              class="avatar-alt"
+              muted
+              playsinline
+              preload="auto"
+              aria-hidden="true"
+              tabindex="-1"
+              disablepictureinpicture
+            >
+              <source src="assets/pfp-hover.webm" type="video/webm" />
+              <source src="assets/pfp-hover.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+
+        <div class="hero-info hero-animate">
+          <div class="hero-name-row hero-info-animate">
+            <h1 class="hero-name">Justine Recto</h1>
+            <i class="ph ph-seal-check hero-verified" title="Verified" aria-label="Verified"></i>
+          </div>
+
+          <p class="hero-location hero-info-animate">
+            <i class="ph ph-map-pin" aria-hidden="true"></i>
+            San Pablo City, Laguna, Philippines
+            <span class="local-time" id="localTime" title="Current local time in the Philippines"></span>
+          </p>
+
+          <p class="hero-roles hero-info-animate">
+            <b>UI/UX Designer</b>&nbsp;·&nbsp;<b>Frontend Developer</b>&nbsp;·&nbsp;<b>Graphic Designer</b>
+          </p>
+
+          <p class="hero-typed hero-info-animate">Currently <span id="typed"></span><span class="caret" aria-hidden="true"></span></p>
+
+          <!-- FIX: badge href="#" is a dead link; use role="status" indicator instead -->
+          <span class="badge hero-info-animate" role="status">
+            <i class="ph ph-rocket-launch" aria-hidden="true"></i>
+            Open for Collaborations&nbsp;·&nbsp;UI/UX &amp; Web Projects
+          </span>
+
+          <div class="cta-row hero-info-animate">
+            <a href="https://calendly.com/justine-recto/30min" class="btn btn-fill" target="_blank" rel="noopener noreferrer">
+              <i class="ph ph-calendar-blank" aria-hidden="true"></i> Schedule a Meeting
+            </a>
+            <!-- FIX: type="button" prevents any default submit behaviour -->
+            <button class="btn btn-ghost" id="openEmailModal" type="button">
+              <i class="ph ph-envelope-simple" aria-hidden="true"></i> Send Email
+            </button>
+            <a href="assets/Justine%20Cv.pdf" download="Justine_Recto_Resume.pdf" class="btn btn-ghost">
+              <i class="ph ph-download-simple" aria-hidden="true"></i> Download CV
+            </a>
+          </div>
+          <p class="hero-links hero-info-animate">
+            <a href="https://www.linkedin.com/in/recto-justine-s-ab88b5406/" target="_blank" rel="noopener noreferrer">linkedin <span class="arr">↗</span></a>
+            <a href="https://www.facebook.com/prettyboytine" target="_blank" rel="noopener noreferrer">facebook <span class="arr">↗</span></a>
+            <a href="https://www.instagram.com/coziestine" target="_blank" rel="noopener noreferrer">instagram <span class="arr">↗</span></a>
+            <a href="https://www.threads.com/@coziestine" target="_blank" rel="noopener noreferrer">threads <span class="arr">↗</span></a>
+          </p>
+        </div>
+
+      </div>
+      <div class="stats-row" id="statsRow">
+            <div class="stat"><span class="stat-num" data-stat="tech" data-target="13">13</span><span class="stat-label">Technologies</span></div>
+            <div class="stat"><span class="stat-num" data-stat="projects" data-target="3">3</span><span class="stat-label">Projects</span></div>
+            <div class="stat"><span class="stat-num" data-stat="live" data-target="1">1</span><span class="stat-label">Live Now</span></div>
+            <div class="stat"><span class="stat-num" data-stat="certs" data-target="5">5</span><span class="stat-label">Certifications</span></div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ══ STICKY NAV ══ -->
+  <nav class="site-nav side" id="siteNav" aria-label="Sections">
+    <a href="#top" class="brand"><span class="brand-text">coziestine<small>programmer</small></span></a>
+    <div class="side-group side-main">
+      <p class="side-label">Navigate</p>
+      <ul class="nav-list">
+        <li><a href="#top" class="nav-link"><i class="ph ph-house" aria-hidden="true"></i>Home</a></li>
+        <li><a href="#about" class="nav-link"><i class="ph ph-user" aria-hidden="true"></i>About</a></li>
+        <li><a href="#tech" class="nav-link"><i class="ph ph-stack" aria-hidden="true"></i>Tech</a></li>
+        <li><a href="#projects" class="nav-link"><i class="ph ph-rocket-launch" aria-hidden="true"></i>Projects</a></li>
+        <li><a href="#experience" class="nav-link"><i class="ph ph-briefcase" aria-hidden="true"></i>Experience</a></li>
+        <li><a href="#education" class="nav-link"><i class="ph ph-graduation-cap" aria-hidden="true"></i>Education</a></li>
+        <li><a href="#certifications" class="nav-link"><i class="ph ph-certificate" aria-hidden="true"></i>Certs</a></li>
+        <li><a href="#contact" class="nav-link"><i class="ph ph-envelope-simple" aria-hidden="true"></i>Contact</a></li>
+      </ul>
+    </div>
+    <div class="side-group side-extra">
+      <p class="side-label">Quick links</p>
+      <a class="side-link" href="https://calendly.com/justine-recto/30min" target="_blank" rel="noopener noreferrer"><i class="ph ph-calendar-check" aria-hidden="true"></i>Book a call <span class="arr">↗</span></a>
+      <a class="side-link" href="assets/Justine%20Cv.pdf" download="Justine_Recto_Resume.pdf"><i class="ph ph-download-simple" aria-hidden="true"></i>Resume</a>
+      <button class="side-link" id="replayTour" type="button"><i class="ph ph-cursor-click" aria-hidden="true"></i>Replay tour</button>
+      <button class="kbd-btn" id="openPalette" type="button" aria-label="Open command menu"><i class="ph ph-magnifying-glass" aria-hidden="true"></i>Jump to… <kbd id="kbdHint">Ctrl K</kbd></button>
+    </div>
+    <div class="side-group side-extra side-bottom">
+      <p class="side-hints"><span><kbd>/</kbd> search projects</span></p>
+      <p class="side-status"><span class="pulse" aria-hidden="true"></span>Open for collaborations</p>
+      <a class="side-mail" href="mailto:rectojustinedev@gmail.com">rectojustinedev@gmail.com</a>
+    </div>
+  </nav>
+
+  <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marqueeTrack"></div></div>
+
+  <!-- ══ MAIN CONTENT ══ -->
+  <main class="main-wrap" id="main" tabindex="-1">
+    <div class="main-grid">
+
+      <!-- ── LEFT COLUMN ── -->
+      <div class="col col-left">
+
+        <!-- About -->
+        <section class="card reveal" id="about">
+          <div class="section-head">
+            <h2 class="section-label"><i class="ph ph-user" aria-hidden="true"></i> About</h2>
+          </div>
+          <div class="about-body">
+            <p>I'm Justine Recto, an aspiring full-stack developer and Information Systems student passionate about creating modern web applications and digital solutions. I enjoy turning ideas into functional and visually appealing experiences, working with technologies such as HTML, CSS, JavaScript, databases, and other tools that bring projects to life.</p>
+            <p>Throughout my academic journey, I've worked on various web development, UI/UX, and information systems projects while actively participating in student organizations and leadership initiatives. These experiences have strengthened my skills in problem-solving, project management, teamwork, and digital communication, allowing me to contribute effectively to both technical and collaborative environments.</p>
+            <p>Currently, I'm focused on expanding my expertise in full-stack development, software engineering, and emerging technologies. I'm constantly learning new tools, frameworks, and best practices to build scalable applications, improve user experiences, and develop solutions that create meaningful impact for businesses, organizations, and communities.</p>
+          </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="card reveal" id="tech">
+          <div class="section-head">
+            <h2 class="section-label"><i class="ph ph-stack" aria-hidden="true"></i> Tech Stack</h2>
+            <!-- FIX: "View All" href="#" was a dead link – removed or keep as placeholder -->
+            <span class="view-all">All Skills</span>
+          </div>
+
+          <div class="stack-group">
+            <h3 class="stack-label">UI/UX Design</h3>
+            <div class="tags">
+              <span class="tag"><img class="si" src="https://cdn.simpleicons.org/figma/B7B7BC" alt="" width="14" height="14" loading="lazy"/> Figma</span>
+              <span class="tag"><i class="ph ph-paint-brush" aria-hidden="true"></i> Canva</span>
+            </div>
+          </div>
+
+          <div class="stack-group">
+            <h3 class="stack-label">Frontend</h3>
+            <div class="tags">
+              <span class="tag"><img class="si" src="https://cdn.simpleicons.org/javascript/B7B7BC" alt="" width="14" height="14" loading="lazy"/> JavaScript</span>
+              <span class="tag"><img class="si" src="https://cdn.simpleicons.org/react/B7B7BC" alt="" width="14" height="14" loading="lazy"/> React</span>
+              <span class="tag"><img class="si" src="https://cdn.simpleicons.org/vuedotjs/B7B7BC" alt="" width="14" height="14" loading="lazy"/> Vue.js</span>
+              <span class="tag"><img class="si" src="https://cdn.simpleicons.org/tailwindcss/B7B7BC" alt="" width="14" height="14" loading="lazy"/> Tailwind CSS</span>
+              <span class="tag"><img class="si" src="https://cdn.simpleicons.org/bootstrap/B7B7BC" alt="" width="14" height="14" loading="lazy"/> Bootstrap</span>
+              <span class="tag"><img class="si" src="https://cdn.simpleicons.org/vite/B7B7BC" alt="" width="14" height="14" loading="lazy"/> Vite</span>
+            </div>
+          </div>
+
+          <div class="stack-group">
+            <h3 class="stack-label">Backend</h3>
+            <div class="tags">
+              <span class="tag"><img class="si" src="https://cdn.simpleicons.org/nodedotjs/B7B7BC" alt="" width="14" height="14" loading="lazy"/> Node.js</span>
+              <span class="tag"><img class="si" src="https://cdn.simpleicons.org/supabase/B7B7BC" alt="" width="14" height="14" loading="lazy"/> Supabase</span>
+            </div>
+          </div>
+
+          <div class="stack-group">
+            <h3 class="stack-label">DevOps &amp; Cloud</h3>
+            <div class="tags">
+              <span class="tag"><i class="ph ph-amazon-logo" aria-hidden="true"></i> AWS</span>
+              <span class="tag"><img class="si" src="https://cdn.simpleicons.org/github/B7B7BC" alt="" width="14" height="14" loading="lazy"/> GitHub</span>
+              <span class="tag"><img class="si" src="https://cdn.simpleicons.org/vercel/B7B7BC" alt="" width="14" height="14" loading="lazy"/> Vercel</span>
+            </div>
+          </div>
+
+          <div class="stack-group">
+            <h3 class="stack-label">AI Tools</h3>
+            <div class="tags">
+              <span class="tag"><i class="ph ph-open-ai-logo" aria-hidden="true"></i> ChatGPT</span>
+              <span class="tag"><img class="si" src="https://cdn.simpleicons.org/claude/B7B7BC" alt="" width="14" height="14" loading="lazy"/> Claude</span>
+              <span class="tag"><img class="si" src="https://cdn.simpleicons.org/googlegemini/B7B7BC" alt="" width="14" height="14" loading="lazy"/> Gemini</span>
+              <span class="tag"><i class="ph ph-heart" style="color:#F5425D;" aria-hidden="true"></i> Lovable</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="card reveal" id="projects">
+          <div class="section-head">
+            <h2 class="section-label"><i class="ph ph-rocket-launch" aria-hidden="true"></i> Recent Projects</h2>
+            <span class="view-all" id="projCount" aria-live="polite">3 Projects</span>
+          </div>
+          <div class="proj-toolbar">
+            <label class="proj-search" for="projSearch">
+              <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
+              <input type="search" id="projSearch" placeholder="Search projects…" autocomplete="off" aria-label="Search projects"/>
+            </label>
+            <div class="proj-filters" id="projFilters" role="group" aria-label="Filter projects by category">
+              <button class="proj-chip active" type="button" data-filter="all" aria-pressed="true">All</button>
+              <button class="proj-chip" type="button" data-filter="Game" aria-pressed="false">Game</button>
+              <button class="proj-chip" type="button" data-filter="Web App" aria-pressed="false">Web App</button>
+              <button class="proj-chip" type="button" data-filter="Website" aria-pressed="false">Website</button>
+            </div>
+          </div>
+          <div class="projects-list" id="projectsList">
+
+            <a href="https://lovecatcher.netlify.app/" class="project-card" data-category="Game" target="_blank" rel="noopener noreferrer">
+              <div class="proj-info">
+                <h3>Love Catcher</h3>
+                <p>Online web game for your girlfriend</p>
+                <p class="proj-url"><i class="ph ph-link" aria-hidden="true"></i> lovecatcher.netlify.app</p>
+              </div>
+              <i class="ph ph-arrow-right proj-arrow" aria-hidden="true"></i>
+            </a>
+
+            <a href="https://taripon.vercel.app/" class="project-card" data-category="Web App" target="_blank" rel="noopener noreferrer">
+              <div class="proj-info">
+                <h3>Taripon</h3>
+                <p>Web App online savings monitoring system</p>
+                <p class="proj-url"><i class="ph ph-link" aria-hidden="true"></i> taripon.vercel.app</p>
+              </div>
+              <i class="ph ph-arrow-right proj-arrow" aria-hidden="true"></i>
+            </a>
+
+            <a href="https://oldlunarstudio-photobooth.vercel.app/" class="project-card" data-category="Web App" target="_blank" rel="noopener noreferrer">
+              <div class="proj-info">
+                <h3>Old Luna Studio Photobooth</h3>
+                <p>Digital photobooth web application</p>
+                <p class="proj-url">
+                  <i class="ph ph-link" aria-hidden="true"></i> oldlunarstudio-photobooth.vercel.app
+                </p>
+              </div>
+            <i class="ph ph-arrow-right proj-arrow" aria-hidden="true"></i>
+          </a>
+
+            <p class="proj-empty" id="projEmpty" hidden>No projects match your search.</p>
+          </div>
+        </section>
+
+      </div><!-- /col-left -->
+
+      <!-- ── RIGHT COLUMN ── -->
+      <!-- FIX: original code had the right column closing comment misplaced as /col-right on the left col -->
+      <div class="col col-right">
+
+        <!-- Experience -->
+        <section class="card reveal" id="experience">
+          <div class="section-head">
+            <h2 class="section-label"><i class="ph ph-briefcase" aria-hidden="true"></i> Experience</h2>
+          </div>
+          <div class="timeline">
+
+            <div class="tl-item">
+              <div class="tl-dot-wrap"><span class="tl-dot active"></span></div>
+              <div class="tl-body">
+                <span class="tl-year">2024</span>
+                <h3>Work Immersion</h3>
+                <p>SafeRoads.Ph</p>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-dot-wrap"><span class="tl-dot"></span></div>
+              <div class="tl-body">
+                <span class="tl-year">2019</span>
+                <h3>Hello World! 👋</h3>
+                <p>Wrote my first line of code</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section class="card reveal" id="education">
+          <div class="section-head">
+            <h2 class="section-label"><i class="ph ph-graduation-cap" aria-hidden="true"></i> Education</h2>
+          </div>
+          <div class="timeline">
+
+            <div class="tl-item">
+              <div class="tl-dot-wrap"><span class="tl-dot active"></span></div>
+              <div class="tl-body">
+                <span class="tl-year">2025 – Present</span>
+                <h3>BS Information Systems</h3>
+                <p>Dalubhasaan ng Lungsod ng San Pablo City, Laguna</p>
+                <ul class="edu-list">
+                  <li>2025–2026 1st Year Second Semester President</li>
+                  <li>2026–2027 2nd Year First Semester Representative</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-dot-wrap"><span class="tl-dot"></span></div>
+              <div class="tl-body">
+                <span class="tl-year">2020</span>
+                <h3>Technical-Vocational-Livelihood (TVL)</h3>
+                <p>Crecencia Drucila Senior High School</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="card reveal" id="certifications">
+          <div class="section-head">
+            <h2 class="section-label"><i class="ph ph-certificate" aria-hidden="true"></i> Certifications</h2>
+            <span class="view-all" id="certBadge">5 Certs</span>
+          </div>
+          <div class="cert-carousel" id="certCarousel" role="region" aria-roledescription="carousel" aria-label="Certifications">
+            <div class="cert-track" id="certTrack">
+
+              <button class="cert-card cert-slide" type="button" role="group" aria-roledescription="slide" aria-label="1 of 5" data-cert-img="assets/cert1.png" data-cert-title="Ethical Hacking and Data Security">
+                <span class="cert-thumb">
+                  <i class="ph ph-trophy cert-thumb-icon" style="color:#74f442;" aria-hidden="true"></i>
+                  <img src="assets/cert1.png" alt="" loading="lazy" draggable="false"/>
+                  <span class="cert-thumb-zoom" aria-hidden="true"><i class="ph ph-magnifying-glass-plus"></i> View</span>
+                </span>
+                <span class="cert-meta">
+                  <span class="cert-name">Ethical Hacking and Data Security</span>
+                  <span class="cert-issuer">Information Systems Club</span>
+                </span>
+              </button>
+
+              <button class="cert-card cert-slide" type="button" role="group" aria-roledescription="slide" aria-label="2 of 5" data-cert-img="assets/cert5.png" data-cert-title="Introduction to Cybersecurity">
+                <span class="cert-thumb">
+                  <i class="ph ph-shield-check cert-thumb-icon" style="color:#4285f4;" aria-hidden="true"></i>
+                  <img src="assets/cert5.png" alt="" loading="lazy" draggable="false"/>
+                  <span class="cert-thumb-zoom" aria-hidden="true"><i class="ph ph-magnifying-glass-plus"></i> View</span>
+                </span>
+                <span class="cert-meta">
+                  <span class="cert-name">Introduction to Cybersecurity</span>
+                  <span class="cert-issuer">CISCO</span>
+                </span>
+              </button>
+
+              <button class="cert-card cert-slide" type="button" role="group" aria-roledescription="slide" aria-label="3 of 5" data-cert-img="assets/cert2.jpg" data-cert-title="Information and Communications Technology">
+                <span class="cert-thumb">
+                  <i class="ph ph-code cert-thumb-icon" style="color:#a442f4;" aria-hidden="true"></i>
+                  <img src="assets/cert2.jpg" alt="" loading="lazy" draggable="false"/>
+                  <span class="cert-thumb-zoom" aria-hidden="true"><i class="ph ph-magnifying-glass-plus"></i> View</span>
+                </span>
+                <span class="cert-meta">
+                  <span class="cert-name">ICT Week Participant</span>
+                  <span class="cert-issuer">ICT</span>
+                </span>
+              </button>
+
+              <button class="cert-card cert-slide" type="button" role="group" aria-roledescription="slide" aria-label="4 of 5" data-cert-img="assets/cert3.png" data-cert-title="Salient Points of CyberSecurity">
+                <span class="cert-thumb">
+                  <i class="ph ph-lock cert-thumb-icon" style="color:#f80000;" aria-hidden="true"></i>
+                  <img src="assets/cert3.png" alt="" loading="lazy" draggable="false"/>
+                  <span class="cert-thumb-zoom" aria-hidden="true"><i class="ph ph-magnifying-glass-plus"></i> View</span>
+                </span>
+                <span class="cert-meta">
+                  <span class="cert-name">Salient Points of CyberSecurity</span>
+                  <span class="cert-issuer">DICT</span>
+                </span>
+              </button>
+
+              <button class="cert-card cert-slide" type="button" role="group" aria-roledescription="slide" aria-label="5 of 5" data-cert-img="assets/cert4.png" data-cert-title="Introduction to Data Science">
+                <span class="cert-thumb">
+                  <i class="ph ph-chart-line-up cert-thumb-icon" style="color:#4285f4;" aria-hidden="true"></i>
+                  <img src="assets/cert4.png" alt="" loading="lazy" draggable="false"/>
+                  <span class="cert-thumb-zoom" aria-hidden="true"><i class="ph ph-magnifying-glass-plus"></i> View</span>
+                </span>
+                <span class="cert-meta">
+                  <span class="cert-name">Introduction to Data Science</span>
+                  <span class="cert-issuer">CISCO</span>
+                </span>
+              </button>
+
+            </div>
+            <div class="cert-controls">
+              <button class="cert-nav" id="certPrev" type="button" aria-label="Previous certificate">
+                <i class="ph ph-caret-left" aria-hidden="true"></i>
+              </button>
+              <div class="cert-dots" id="certDots" role="tablist" aria-label="Choose certificate"></div>
+              <button class="cert-nav cert-toggle" id="certToggle" type="button" aria-label="Pause automatic slideshow">
+                <i class="ph ph-pause" aria-hidden="true"></i>
+              </button>
+              <span class="cert-count" id="certCount">1 / 5</span>
+              <button class="cert-nav" id="certNext" type="button" aria-label="Next certificate">
+                <i class="ph ph-caret-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+
+      </div><!-- /col-right -->
+
+    </div><!-- /main-grid -->
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-col">
+          <p class="footer-col-label">Get in Touch</p>
+          <div class="footer-contacts">
+            <button class="footer-link" id="openEmailModalFooter" type="button">
+              <div class="footer-link-icon"><i class="ph ph-envelope-simple" aria-hidden="true"></i></div>
+              <div class="footer-link-content">
+                <div class="footer-link-title">Email</div>
+                <div class="footer-link-sub">rectojustinedev@gmail.com</div>
+              </div>
+            </button>
+            <!-- FIX: was "45-minute" but Calendly link says 30min — corrected to match -->
+            <a href="https://calendly.com/justine-recto/30min" class="footer-link" target="_blank" rel="noopener noreferrer">
+              <div class="footer-link-icon"><i class="ph ph-calendar-check" aria-hidden="true"></i></div>
+              <div class="footer-link-content">
+                <div class="footer-link-title">Let's Talk</div>
+                <div class="footer-link-sub">Schedule a 30-minute meeting</div>
+              </div>
+            </a>
+            <a href="assets/Justine%20Cv.pdf" download="Justine_Recto_Resume.pdf" class="footer-link">
+              <div class="footer-link-icon"><i class="ph ph-download-simple" aria-hidden="true"></i></div>
+              <div class="footer-link-content">
+                <div class="footer-link-title">Download CV</div>
+                <div class="footer-link-sub">Get my latest résumé</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-label">Social Links</p>
+          <div class="social-row">
+            <a href="https://www.linkedin.com/in/recto-justine-s-ab88b5406/" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="ph ph-linkedin-logo" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/prettyboytine" class="social-btn" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="ph ph-facebook-logo" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/coziestine" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="ph ph-instagram-logo" aria-hidden="true"></i></a>
+            <a href="https://www.threads.com/@coziestine" class="social-btn" aria-label="Threads" target="_blank" rel="noopener noreferrer"><i class="ph ph-threads-logo" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+      </div>
+      <p class="footer-copy">© 2026 Justine Recto. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ══ EMAIL MODAL ══ -->
+  <div class="email-modal" id="emailModal" role="dialog" aria-modal="true" aria-labelledby="emailModalTitle">
+    <div class="email-modal-backdrop" id="emailModalBackdrop"></div>
+    <div class="email-modal-box">
+      <div class="email-modal-header">
+        <h2 class="email-modal-title" id="emailModalTitle">
+          <i class="ph ph-envelope-simple" aria-hidden="true"></i> Send a Message
+        </h2>
+        <button class="email-modal-close" id="emailModalClose" type="button" aria-label="Close email form">
+          <i class="ph ph-x" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="email-modal-body">
+        <div class="email-field">
+          <label for="emailFrom">Your Name</label>
+          <input type="text" id="emailFrom" placeholder="Juan dela Cruz" autocomplete="name" />
+        </div>
+        <div class="email-field">
+          <label for="emailReply">Your Email</label>
+          <input type="email" id="emailReply" placeholder="juan@email.com" autocomplete="email" />
+        </div>
+        <div class="email-field">
+          <label for="emailMessage">Message</label>
+          <textarea id="emailMessage" rows="5" maxlength="1000" placeholder="Hi Justine, I'd like to…"></textarea>
+          <span class="email-counter" id="emailCounter" aria-live="off">0 / 1000</span>
+        </div>
+        <input type="text" id="emailWebsite" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" placeholder="Leave empty"/>
+        <!-- FIX: status div must appear BEFORE the send button for correct tab/DOM order -->
+        <div class="email-modal-status" id="emailStatus" role="alert" aria-live="polite"></div>
+        <button class="btn btn-fill email-send-btn" id="emailSendBtn" type="button">
+          <i class="ph ph-paper-plane-tilt" aria-hidden="true"></i> Send Message
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ CERTIFICATE LIGHTBOX ══ -->
+  <div class="cert-lightbox" id="certLightbox" role="dialog" aria-modal="true" aria-label="Certificate preview">
+    <div class="cert-lightbox-backdrop" id="certBackdrop"></div>
+    <div class="cert-lightbox-box">
+      <div class="cert-lightbox-header">
+        <span class="cert-lightbox-title" id="certLightboxTitle"></span>
+        <span class="lb-nav">
+          <button class="cert-lightbox-close" id="certLbPrev" type="button" aria-label="Previous certificate"><i class="ph ph-caret-left" aria-hidden="true"></i></button>
+          <button class="cert-lightbox-close" id="certLbNext" type="button" aria-label="Next certificate"><i class="ph ph-caret-right" aria-hidden="true"></i></button>
+        </span>
+        <button class="cert-lightbox-close" id="certLightboxClose" type="button" aria-label="Close certificate">
+          <i class="ph ph-x" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="cert-lightbox-img-wrap">
+        <img id="certLightboxImg" src="" alt="Certificate" loading="lazy"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ COMMAND PALETTE ══ -->
+  <div class="palette" id="palette" role="dialog" aria-modal="true" aria-label="Command menu">
+    <div class="palette-backdrop" id="paletteBackdrop"></div>
+    <div class="palette-box">
+      <input id="paletteInput" type="text" placeholder="Jump to a section or run an action…" autocomplete="off" aria-label="Search commands" aria-controls="paletteList"/>
+      <ul id="paletteList" role="listbox"></ul>
+    </div>
+  </div>
+
+  <button class="back-top" id="backTop" type="button" aria-label="Back to top">
+    <i class="ph ph-arrow-up" aria-hidden="true"></i>
+  </button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script data-cfasync="false" src="script.js"></script>
+</body>
+</html>
